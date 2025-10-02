@@ -54,14 +54,16 @@ samples, guidance on mobile development, and a full API reference.
 2. enter the web client 1
 3. after you have to setup the Authorised JavaScript origins without google sign in does not work in web application for that ADD URI in Authorised JavaScript origins and enter your web application url that is in your chrome tab search where you run your web application in chrome.
     a. for the local host its like that
-        ```bash
+   
+   ```bash
             http://localhost:55951/
-        ```
+   ```
+   
     b. if you are not on local host then you can add your domain link here
       ```bash
         https://abc.com/
       ```
-4. after that in that go in flutter project and in the web>index.html in the head tag add this 
+5. after that in that go in flutter project and in the web>index.html in the head tag add this 
 meta tag with with your web client id
     ```bash
     <meta name="google-signin-client_id"
