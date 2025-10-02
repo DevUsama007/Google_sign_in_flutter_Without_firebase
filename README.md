@@ -37,7 +37,7 @@ samples, guidance on mobile development, and a full API reference.
       ``` bash
             keytool -list -v -alias androiddebugkey -keystore "$env:USERPROFILE\.android\debug.keystore"
       ```
-            if that is not worked you can try this
+ if that is not worked you can try this
    ```bash
             keytool -keystore path-to-debug-or-production-keystore -list -v
    ```
