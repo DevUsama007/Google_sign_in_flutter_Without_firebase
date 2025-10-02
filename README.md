@@ -28,25 +28,26 @@ samples, guidance on mobile development, and a full API reference.
     b. select the application type android
     c. enter the application name
     d. enter the package name from the app level build.gradle file . 
-        ```bash
+      ```bash
         android {
         namespace = "com.example.google_sign_in_without_firebas"
-        ```
+      ```
     e. get SHA1 certificate by running this command in the terminal or powershell and enter here
-        ```bash
+   
+      ``` bash
             keytool -list -v -alias androiddebugkey -keystore "$env:USERPROFILE\.android\debug.keystore"
-        ```
-        if that is not worked you can try this
-        ```bash
+      ```
+            if that is not worked you can try this
+   ```bash
             keytool -keystore path-to-debug-or-production-keystore -list -v
-        ```
+   ```
     f. then click on create and your android client is created 
-6. After that go in androidMenifest file and in the <application/> enter that client id like that
-            ```bash
+7. After that go in androidMenifest file and in the <application/> enter that client id like that
+   ```bash
             <meta-data
             android:name="com.google.android.gms.client_id"
             android:value="748847791063-001n1f0mpes6qtso98f84oufis66obj5.apps.googleusercontent.com" /> 
-            ```
+   ```
 ## that all for the android now if you want to setup the web application than follow these steps
 
 1. go on client and in the Create OAuth client ID section select the application type web application
@@ -57,9 +58,9 @@ samples, guidance on mobile development, and a full API reference.
             http://localhost:55951/
         ```
     b. if you are not on local host then you can add your domain link here
-        ```bash
+      ```bash
         https://abc.com/
-        ```
+      ```
 4. after that in that go in flutter project and in the web>index.html in the head tag add this 
 meta tag with with your web client id
     ```bash
