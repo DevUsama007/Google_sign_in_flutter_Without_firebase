@@ -39,9 +39,9 @@ samples, guidance on mobile development, and a full API reference.
       ```
  if that is not worked you can try this
    ```bash
-            keytool -keystore path-to-debug-or-production-keystore -list -v
+                keytool -keystore path-to-debug-or-production-keystore -list -v
    ```
-    f. then click on create and your android client is created 
+ f. then click on create and your android client is created 
 7. After that go in androidMenifest file and in the <application/> enter that client id like that
    ```bash
             <meta-data
