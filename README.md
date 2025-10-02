@@ -28,10 +28,10 @@ samples, guidance on mobile development, and a full API reference.
     b. select the application type android
     c. enter the application name
     d. enter the package name from the app level build.gradle file . 
-          ```bash
+    ```bash
                     android {
                     namespace = "com.example.google_sign_in_without_firebas"
-          ```
+    ```
     e. get SHA1 certificate by running this command in the terminal or powershell and enter here
    
       ``` bash
