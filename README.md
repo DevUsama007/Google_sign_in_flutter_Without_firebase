@@ -1,5 +1,8 @@
 # Google Sign In Flutter Without The Firebase Integration
-![google-signin-demo](https://youtu.be/PojXu4-9Q_o)
+
+[![Flutter Firebase Authentication Tutorial](https://img.youtube.com/vi/PojXu4-9Q_o/0.jpg)](https://youtu.be/PojXu4-9Q_o)
+
+*Click the image above to watch the complete tutorial on YouTube*
 
 
 
