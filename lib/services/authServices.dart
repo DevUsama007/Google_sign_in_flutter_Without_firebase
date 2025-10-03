@@ -1,8 +1,11 @@
+import 'package:flutter/material.dart';
 import 'package:google_sign_in/google_sign_in.dart';
+import 'package:google_sign_in_without_firebas/utils/notificationUtils.dart';
+import 'package:google_sign_in_without_firebas/view/homePage.dart';
 
 // import 'package:jwt_decoder/jwt_decoder.dart';
 class AuthServices {
-  Future<void> webGoogleLogin() async {
+  Future<void> webGoogleLogin(BuildContext context) async {
     try {
       final GoogleSignIn googleSignIn = GoogleSignIn(
         clientId:
@@ -15,7 +18,7 @@ class AuthServices {
       print(auth.idToken.toString());
       print(user.displayName.toString());
     } catch (e) {
-      print(e.toString());
+      ShowNotification.customNotifcation(context, e.toString());
     }
   }
 
@@ -28,7 +31,7 @@ class AuthServices {
     }
   }
 
-  Future<void> androidGoogleLogin() async {
+  Future<void> androidGoogleLogin(BuildContext context) async {
     try {
       final GoogleSignIn googleSignIn = GoogleSignIn(
         scopes: ['email', 'profile'],
@@ -41,11 +44,24 @@ class AuthServices {
         print(user.id.toString());
         print(user.displayName.toString());
         print(user.email);
+        Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (context) => HomeScreenView(
+                userid: user.id.toString(),
+                name: user.displayName.toString(),
+                email: user.email.toString(),
+                dp: user.photoUrl.toString(),
+                accessToken: auth.accessToken.toString(),
+              ),
+            ));
       }
     } catch (e) {
-      print(e.toString());
+      ShowNotification.customNotifcation(context, e.toString());
     }
   }
+
+// ToDo: you can use this function to verifiy the email but that is not secure the email verification must be done on the backend using accessToken that is provided by the google auth services
 
 // void verifyIdToken(String idToken, String clientId) {
 //   Map<String, dynamic> decodedToken = JwtDecoder.decode(idToken);
