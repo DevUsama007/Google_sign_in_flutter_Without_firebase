@@ -1,5 +1,9 @@
 # Google Sign In Flutter Without The Firebase Integration
+##demo video
 
+<video src="https://youtu.be/PojXu4-9Q_o" width="600" controls>
+  Your browser does not support the video tag.
+</video>
 ## steps for the google sign in flutter without the firebase
 1. Create the Flutter Project the most important part hehehe.
 2. go to [Google Cloud Console](https://console.cloud.google.com/welcome?project=stellar-operand-473814-c1)
